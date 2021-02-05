@@ -1,0 +1,50 @@
+.card-big{
+    border: 3px solid #82ca66;
+    border-radius: 4px;
+    background-color: #82ca66 !important;
+    width: 1000px;
+    position: relative;
+    animation: in 1s;
+    margin: 5px;
+    padding: 15px;
+    min-height: 113px;
+    margin-top: -195px;
+}
+
+#BlogFace{
+    width: 300px;
+    min-height: 70px;
+    background-color: #82ca66;
+    position: fixed;
+    top: 85px;
+    left: 125px;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+#ctrlContainer{
+    position: relative;
+}
+
+.top{
+    transition: all 1s;
+    position: fixed;
+    bottom: 100px;
+    left: 1650px;
+    z-index: 200;
+}
+
+#btnTop::after {
+    padding: 15px;
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#blogFaceBtnCont{
+    margin-bottom: -10px;
+    margin-top: 24px;
+}

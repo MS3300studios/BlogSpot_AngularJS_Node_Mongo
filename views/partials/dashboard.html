@@ -1,0 +1,45 @@
+<div ng-controller="dashboardCtrl">
+    <span hidden ng-init="checkToken()"></span>
+    <h1 id="mainDashboardH1">Your blogs:</h1>
+    <div class="flexCenter">
+            <div id="cardContainer" ng-init="getBlogs()">
+                <div class="card" ng-repeat="blog in blogs">
+                    <p hidden>{{blog._id}}</p>
+                    <p class="cardBlockText roboto bold font10">started: {{blog.createdAt | date}}</p>
+                    <div id="contentWrapper">
+                        <a href="/#/show/{{blog._id}}"><h3 class="cardBlockTitle roboto bold font25">{{blog.title}}</h3></a>
+                    </div>
+                    <div id="contentWrapper">
+                        <p class="cardBlockText roboto font20">{{blog.content}}</p>
+                    </div>
+                    <p class="cardBlockText roboto bold font12">(see the full blog to read further)</p>
+                    <div class="buttons">
+                        <button id="edi" ng-click="changeLightbox(true, 'edit', blog._id)" class="font15">edit</button>
+                        <button id="del" ng-click="delete(blog._id,'blog deleted')" class="font15">delete</button>
+                    </div>
+                </div>    
+                
+                <!-- <button ng-click='changepath'></button> -->
+                
+                <div class="card" id="addBlog" ng-click="changeLightbox(true, 'send')">
+                    <img src="/add.png">
+                </div>  
+                <br>
+            </div> 
+        </div>
+    <div id="lightbox" ng-style="lightbox">
+        <div id="formContainer">
+            <img id="imgx" src="x.png" title="close" ng-click="changeLightbox(false)">
+            <form method="POST">
+                <input id="editTitleInput" type="text" class="formMargins formInputs" placeholder="your title here!" ng-model="title" value="{{blog.title}}">
+                <br>
+                <textarea id="editContentInput" class="formMargins formInputs" cols="120" rows="30" id="textarea" placeholder="your blog here!" ng-model="content">{{blog.content}}</textarea>
+                <br>
+                <button id="submit" class="font20" type="submit" ng-click="form(action, message)">submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="flashBox" class="notVisible">
+        <h1 id="flashMsg">{{flashMessage}}</h1>
+    </div>
+</div>

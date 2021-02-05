@@ -1,0 +1,35 @@
+<div ng-init="getBlog()" ng-controller="showCtrl" id="ctrlContainer">
+    <span hidden ng-init="checkToken()"></span>
+    <div ng-controller="dashboardCtrl">
+    <div id="BlogFace">
+        <h1>{{blog.title}}</h1>
+        <div id="blogFaceBtnCont">
+        <button ng-click="changeLightbox(true, 'edit', blog._id)" class="font15">edit</button>
+        <a href="/#/"><button ng-click="delete(blog._id,'blog deleted')" class="font15">delete</button></a>
+        </div>
+    </div>
+    <div class="flexCenter">
+        <div class="card-big">
+            <div id="bigCardContent">
+                <p class="font15">{{blog.content}}</p>
+            </div>
+            <button id="btnTop" class="top notVisible" ng-click="top()"></button>
+        </div>
+    </div>
+    <div id="lightbox" ng-style="lightbox">
+        <div id="formContainer">
+            <img id="imgx" src="x.png" title="close" ng-click="changeLightbox(false)">
+            <form method="POST">
+                <input id="editTitleInput" type="text" class="formMargins formInputs" placeholder="your title here!" ng-model="title" value="{{blog.title}}">
+                <br>
+                <textarea id="editContentInput" class="formMargins formInputs" cols="120" rows="30" id="textarea" placeholder="your blog here!" ng-model="content">{{blog.content}}</textarea>
+                <br>
+                <button id="submit" class="font20" type="submit" ng-click="form(action, message)"><span ng-click="showUpdate()">submit</span></button>
+            </form>
+        </div>
+    </div>
+    <div id="flashBox" class="notVisible">
+        <h1 id="flashMsg">{{flashMessage}}</h1>
+    </div>
+    </div>
+</div>

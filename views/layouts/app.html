@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="256 x 256" href="http://localhost:3000/favicon.ico">
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="/dashboard.css">
+    <link rel="stylesheet" href="/menu.css">
+    <link rel="stylesheet" href="/show.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>BlogSpot</title>
+</head>
+<body ng-app='app' ng-controller="ApplicationCtrl">
+  <span hidden>{{currentUser}}</span>
+  <div ng-if="currentUser" ng-include="'/partials/menu.html'"></div>
+  <div ng-view ng-init="checkToken()">
+  
+  </div>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script> DEPRECATED-->
+  <script src="/angularJS.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script> DEPRECATED -->
+  <script src="/angular-route.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

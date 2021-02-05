@@ -1,0 +1,184 @@
+body{
+    background-color: seagreen !important;
+}
+button{
+    background-color: #01b1b1;
+    color: white !important;
+    border: none;
+    border-radius: 4px !important;
+    padding: 3px 5px 3px 5px;
+}
+button:hover{
+    animation: tilt 2s;
+}
+@keyframes tilt{
+    0%{
+        transform: rotate(-4deg);
+        background: #01b1b1;
+    }
+    50%{
+        transform: rotate(4deg);
+        background:  #007979;
+    }
+    100%{    
+        transform: rotate(-4deg);
+        background: #01b1b1;
+    }
+}
+.flexCenter{
+    display: flex;
+    justify-content: center;
+}
+#cardContainer{
+    width: 1000px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fill,minmax(310px, 0fr));
+    margin-top: -100px;
+}
+.mediumCardImage{
+    width: 180px;
+    height: 80px;
+}
+.card{
+    text-decoration: none;
+    color: black;
+    border: 3px solid black;
+    border-radius: 4px;
+    background-color: #82ca66 !important;
+    width: 300px;
+    height: 280px;
+    /* width: 250px;
+    height: 220px; */
+    animation: in 1s;
+    margin: 5px;
+}
+#contentWrapper{
+    height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card h4{
+    margin-top: 10px;
+}
+.card p{
+    margin: 2px;
+}
+.card .buttons{
+    margin-top: 10px;
+}
+.card img{
+    width: 78px;
+    height: 80px;
+    margin-top: 111px;
+    margin-left: 109px;
+}
+#edi{
+    margin-left: 30px;
+    margin-top: 15px;
+}
+#del{
+    margin-left: 146px;
+}
+.card:hover{
+    animation: out 1s;
+    box-shadow: 10px 10px 29px -1px rgba(0,0,0,0.55);
+}
+@keyframes out{
+    from {box-shadow: none;}
+    to {box-shadow: 10px 10px 29px -1px rgba(0,0,0,0.55);}
+}
+@keyframes in{
+    from {box-shadow: 10px 10px 29px -1px rgba(0,0,0,0.55);}
+    to {box-shadow: none;}
+}
+
+.cardBlockTitle{
+    padding: 5px;
+} 
+.cardBlockText{
+    padding: 5px;
+}
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+#lightbox{
+    z-index: 2000;
+    visibility: hidden;  
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.55);
+}
+#formContainer{
+    margin: 50px auto;
+    background-color: #82ca66;
+    border-radius: 4px;
+    width: 1039px;
+    padding-bottom: 5px;
+    /* height: 970px; */
+    /* padding:4px; */
+}
+.formMargins{
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.formInputs{
+    display:block;
+    border:none;
+    border-bottom: 3px solid rgb(53, 51, 167);
+    font-size: large;
+}
+#editContentInput{
+    /* margin: 5px 0px 10px 25px; */
+    height: 600px;
+}
+#imgx{
+    width: 15px;
+    height: 15px;
+}
+#submit{
+    margin-left: 500px;
+    margin-bottom: 10px;
+}
+/* flash */
+#flashBox{
+    background-color: white;
+    position: fixed;
+    bottom: 200px;
+    left: 43px;
+    width: 200px;
+    height: 100px;
+    border: 5px solid #6bb94c;
+    border-radius: 10px;
+    padding: 2px;
+    z-index: 2001;
+}
+#flashMsg{
+    /* margin-top: 30px;
+    margin-left: 15px; */
+}
+.notVisible{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2s linear;
+}
+.show{
+    visibility: visible;
+    opacity: 1;
+}
+#mainDashboardH1{
+    position: absolute;
+    top: 95px;
+    left: 825px;
+    font-size: 50px;
+    color: #0fb900;
+}
+
+
+
+

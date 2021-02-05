@@ -1,0 +1,19 @@
+<nav ng-controller="menuCtrl">
+    <a href="#"><div id="logo-container">
+       <img id="menuLogo" class="img" src="./BlogSpotLogo.png">
+    </div></a>
+    <div id="list-container">
+        <p>option 1</p>
+        <p>option 2</p>
+        <p>option 3</p>
+        <div id="dropdown"><img class="img" id="userPhoto" src="./UserPhoto.png" ng-click="dropdown()">
+          <div id="dropdown-content" class="dropdownNotActive" ng-style="dropdown">
+            <p id="dropdown-content-p" class="dropdownItemNotActive" ng-style="dropdownP" ng-init="getUsername()">{{username}}</p>
+            <hr id="dropdownHR" class="dropdownItemNotActive">
+            <a href="/myprofile"><p id="dropdown-content-p" class="dropdownItemNotActive" ng-style="dropdownP">My profile</p></a>
+            <a href="/settings"><p id="dropdown-content-p" class="dropdownItemNotActive" ng-style="dropdownP">Settings</p></a>
+            <a href="/#/gate"><p ng-click='logout()' id="dropdown-content-p" class="dropdownItemNotActive" ng-style="dropdownP">Log out</p></a>
+          </div>
+        </div>
+    </div>
+</nav>

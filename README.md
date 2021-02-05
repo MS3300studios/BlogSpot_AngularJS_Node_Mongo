@@ -5,7 +5,6 @@ To automate tasks that include minifying, uglyfying, and updating the code I use
 I also use authorization in this app with JSON web token, and BCrypt to hash passwords
 In order to make this app usable after the code for AngularJS is dropped by Google I incorporated it locally into the project so that it doesn't need the links to fetch the AngularJS logic.
 
----
 ## Features:
 * creating profiles
 * posting, editing and deleting posts
@@ -15,7 +14,6 @@ In order to make this app usable after the code for AngularJS is dropped by Goog
 * protection against unauthorized users trying to access confidential URLs
 * the app displays flash messages to inform or prompt the user
 
----
 ## Things to fix:
 * adding scalability for smaller screens and devices
 * adding the ability to upload photos by users
@@ -26,4 +24,5 @@ In order to make this app usable after the code for AngularJS is dropped by Goog
 ---
 
 ### If you want to play around with this app just download the source code and start the server with `gulp start` 
-### The only currently working login details are for the profile: Monica Harrison. Her password is: *monicaharrison* and her email is: *monica.harrison@gmail.com*
+The only currently working login details are for the profile: Monica Harrison. 
+Her password is: **monicaharrison** and her email is: **monica.harrison@gmail.com**

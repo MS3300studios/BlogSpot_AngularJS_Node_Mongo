@@ -25,4 +25,5 @@ In order to make this app usable after the code for AngularJS is dropped by Goog
 
 ### If you want to play around with this app just download the source code and start the server with `gulp start` 
 The only currently working login details are for the profile: Monica Harrison. 
-Her password is: **monicaharrison** and her email is: **monica.harrison@gmail.com**
+Her password is: **monicaharrison** 
+and her email is: **monica.harrison@gmail.com**
